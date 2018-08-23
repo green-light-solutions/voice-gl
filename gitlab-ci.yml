@@ -1,0 +1,74 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - SERVICE=voice-gl
+
+  - IMAGE_NAME=$(date +%y%m%d)-$(echo $CI_COMMIT_SHA | cut -c 1-7)
+  - DEV_TAG=registry.green-light.com/voice/voice-microsite/microsite:latest-dev
+  - PROD_TAG=registry.green-light.com/voice/voice-microsite/microsite:latest-prod
+
+build-dev:
+  stage: build
+  script:
+    - docker login -u "voice-ci" -p "$VOICE_CI_JOB_TOKEN" registry.green-light.com
+    - docker pull $DEV_TAG || true
+    - docker build --build-arg CONFIG_ENV=dev --cache-from "$DEV_TAG" --tag "$DEV_TAG" .
+    - docker push "$DEV_TAG"
+
+  tags:
+    - docker
+    - vshosting-cluster
+  only:
+    - dev
+
+build-prod:
+  stage: build
+  script:
+    - docker login -u "voice-ci" -p "$VOICE_CI_JOB_TOKEN" registry.green-light.com
+    - docker pull $PROD_TAG || true
+    - docker build --build-arg CONFIG_ENV=prod --cache-from "$PROD_TAG" --tag "$PROD_TAG" .
+    - docker push "$PROD_TAG"
+  tags:
+    - docker
+    - vshosting-cluster
+  only:
+    - master
+
+deploy-dev:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - apk update  && apk add --no-cache curl
+    - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+    - chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
+    - mkdir -p $HOME/.kube
+    - echo -n $GREEN_LIGHT_KUBE_CONFIG_DEV | base64 -d > $HOME/.kube/config
+    - kubectl config use-context k8s-cluster
+    - kubectl patch deployment dev-$SERVICE --namespace=dev -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\",\"version\":\"$CI_COMMIT_SHA\"}}}}}"
+  tags:
+    - vshosting-cluster
+  only:
+    - dev
+    
+deploy-prod:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - apk update  && apk add --no-cache curl
+    - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+    - chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
+    - mkdir -p $HOME/.kube
+    - echo -n $GREEN_LIGHT_KUBE_CONFIG_PROD | base64 -d > $HOME/.kube/config
+    - kubectl config use-context k8s-cluster
+    - kubectl patch deployment prod-$SERVICE --namespace=prod -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\",\"version\":\"$CI_COMMIT_SHA\"}}}}}"
+  tags:
+    - vshosting-cluster
+  only:
+    - master
