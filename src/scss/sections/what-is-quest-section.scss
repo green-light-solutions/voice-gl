@@ -1,0 +1,178 @@
+.section.what-is-quest-section {
+  position: relative;
+  text-align: center;
+  background-color: $color-white;
+
+  &::before {
+    content: 'What is Quest?';
+    position: absolute;
+    top: 15%;
+    width: 85%;
+    text-align: center;
+    font-family: $font-europa;
+    font-weight: bold;
+    font-size: 15.5rem;
+    line-height: 15.5rem;
+    color: #eee;
+    opacity: 0.64;
+  }
+
+  &.active {
+    .content-wrapper .content {
+      opacity: 1;
+    }
+  }
+
+  .content-wrapper {
+    position: relative;
+    width: 65%;
+    padding: 0 20px;
+
+    .content {
+      width: 520px;
+      max-width: 100%;
+      display: inline-block;
+      text-align: left;
+      opacity: 0;
+      transition: opacity .7s ease-in-out $scrolling-speed;
+
+      h2 {
+        color: $color-gray;
+        font-family: $font-europa;
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+        font-weight: bold;
+        margin-bottom: 5rem;
+      }
+
+      p {
+        color: $color-gray;
+        font-size: 2.7rem;
+        line-height: 3.9rem;
+        margin-bottom: 3rem;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  .quest-device-preview {
+    position: absolute;
+    bottom: 0;
+    right: calc(30% - 380px);
+    max-height: 90%;
+    transform: translateY(100%);
+    transition: transform .6s ease-in $scrolling-speed, opacity 1s ease-in $scrolling-speed;
+    opacity: 0;
+
+    .animation-wrapper > img {
+      display: block;
+    }
+
+    .icon {
+      position: absolute;
+      opacity: 0;
+      transition: opacity .7s ease-in-out $scrolling-speed;
+      transform: translateY(-50%) translateX(-50%);
+
+      &:first-child {
+        top: 2%;
+        left: 50%;
+        transition-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        top: 25%;
+        left: 95%;
+        transition-delay: 1.8s;
+      }
+
+      &:nth-child(3) {
+        top: 65%;
+        left: 92%;
+        transition-delay: 2.1s;
+      }
+
+      &:nth-child(4) {
+        top: 65%;
+        left: 11%;
+        transition-delay: 2.3s;
+      }
+
+      &:nth-child(5) {
+        top: 25%;
+        left: 7%;
+        transition-delay: 2.6s;
+      }
+    }
+  }
+
+  &.active .quest-device-preview {
+    transform: translateY(0);
+    opacity: 1;
+
+    .icon {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: $screen-lg-max) {
+    &::before {
+      font-size: 20rem;
+      line-height: 20rem;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    &::before {
+      display: none;
+    }
+
+    .content-wrapper {
+      margin-top: 3rem;
+      width: 100%;
+
+      .content {
+        opacity: 1;
+
+        h2 {
+          font-size: 3rem;
+          line-height: 3rem;
+          margin-bottom: 4rem;
+        }
+
+        p {
+          font-size: 1.7rem;
+          line-height: 2.7rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    .quest-device-preview {
+      display: block;
+      right: auto;
+      position: relative;
+      top: 45px;
+      transform: translateY(0);
+      opacity: 1;
+      width: 100vw;
+      padding: 0 4rem;
+      margin-top: -2rem;
+
+      .animation-wrapper {
+        position: relative;
+
+        & > img {
+          width: 100%;
+        }
+
+        .icons {
+          .icon {
+            width: 60px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

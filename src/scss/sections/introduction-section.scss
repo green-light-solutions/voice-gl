@@ -1,0 +1,121 @@
+.section.introduction-section {
+  color: $color-white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .btn-primary {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    @media screen and (min-width: $screen-md-min) {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url('../../assets/img/quest-hero-bg.jpg') no-repeat center;
+    background-size: cover;
+    animation: zoom 60s infinite linear;
+  }
+
+  &.active .headings {
+    opacity: 1;
+  }
+
+  .headings {
+    position: relative;
+    animation: fadeIn .5s ease-in;
+    opacity: 0;
+    transition: opacity .5s ease-in-out $scrolling-speed;
+    padding: 0 20px;
+
+    img {
+      height: 80px;
+      margin-bottom: 6rem;
+    }
+
+    h2 {
+      font-size: 9rem;
+      font-weight: bold;
+      line-height: 9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h3 {
+      font-family: $font-proxima-nova;
+      font-size: 3rem;
+      line-height: 3rem;
+      color: #e0e0e0;
+      font-weight: lighter;
+      margin-bottom: 1.5rem;
+
+      .highlighted {
+        margin-top: 1.5rem;
+        color: $color-primary;
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .headings {
+      margin-bottom: 8rem;
+
+      img {
+        height: 60px;
+      }
+
+      h2 {
+        font-size: 5rem;
+        line-height: 5rem;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+
+        .highlighted {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .hero-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: $color-white;
+    width: 100%;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-footer-content {
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 8px;
+      font-size: 1.4rem;
+      color: #6a6a6a;
+      text-decoration: none;
+
+      .fa {
+        font-size: 2.5rem;
+        color: $color-primary;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.btn, #btn-ready {
+  font-size: 1.7rem;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 4.2rem;
+  padding: 0 24px;
+  transition: all .3s linear;
+  font-weight: lighter;
+  border-radius: 25px;
+  border: 1px solid $color-white;
+
+  &.delay {
+    transition-delay: $scrolling-speed;
+  }
+
+  &.btn-link {
+    border-color: transparent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.btn-primary {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding: 0 10px;
+  }
+}

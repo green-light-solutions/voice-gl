@@ -1,0 +1,13 @@
+.display-table {
+  display: table;
+  width: 100%;
+
+  .display-table-row {
+    display: table-row;
+  }
+
+  .display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

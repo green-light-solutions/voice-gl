@@ -1,0 +1,33 @@
+{
+  "name": "voice-microsite",
+  "version": "1.0.0",
+  "description": "Micro site for Voice.gl",
+  "main": "index.js",
+  "repository": "https://gitlab.green-light.com/voice/voice-microsite.git",
+  "author": "Green Light Solutions s.r.o.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "grunt",
+    "build": "grunt build --env=$CONFIG_ENV"
+  },
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "fullpage.js": "^2.9.7",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "grunt-sass": "^2.1.0",
+    "grunt-sass-lint": "^0.2.4",
+    "grunt-githooks": "^0.6.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

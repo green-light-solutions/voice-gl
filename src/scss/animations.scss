@@ -1,0 +1,23 @@
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0%, 30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

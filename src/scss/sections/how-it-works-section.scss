@@ -1,0 +1,89 @@
+.section.how-it-works-section {
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      font-family: $font-europa;
+      margin-bottom: 8rem;
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+
+      @media screen and (max-width: $screen-sm) {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+
+    .video-wrapper {
+      display: inline-block;
+      box-shadow: 49px 44px 62px 0 rgba(117, 57, 0, .4);
+      width: 640px;
+      height: 360px;
+      max-width: 100%;
+
+      .overlay {
+        position: absolute;
+
+        &.top {
+          top: 0;
+          height: 40%;
+          width: 100%;
+        }
+
+        &.right {
+          right: 0;
+          width: 40%;
+          height: calc(100% - 50px);
+        }
+
+        &.bottom {
+          bottom: 50px;
+          width: 100%;
+          height: calc(40% - 50px);
+        }
+
+        &.left {
+          left: 0;
+          width: 40%;
+          height: calc(100% - 50px);
+        }
+      }
+
+
+      @media screen and (max-width: $screen-xs) {
+        width: 384px;
+        height: 216px;
+      }
+
+      @media screen and (min-width: $screen-lg-max) {
+        width: 960px;
+        height: 540px;
+      }
+
+      #video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url('../../assets/img/quest-bg.png') no-repeat center $color-primary;
+    background-size: cover;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../../assets/img/quest-bg@2x.png');
+    }
+  }
+}

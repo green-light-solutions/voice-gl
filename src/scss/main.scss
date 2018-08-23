@@ -1,0 +1,66 @@
+@import './variables';
+@import './fonts';
+@import './animations';
+@import './controls';
+@import './layout';
+@import '../../node_modules/fullpage.js/dist/jquery.fullpage';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import './navbar';
+
+html {
+  font-size: 10px;
+  line-height: 16px;
+  font-family: $font-proxima-nova;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: $font-europa;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 1.3rem;
+
+    .hidden {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .desktop {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    .mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .section.why-quest-section {
+    height: auto !important;
+    padding: 0 0 60px;
+
+    .fp-tableCell {
+      height: auto !important;
+    }
+  }
+}
+
+@import './sections/introduction-section';
+@import './sections/what-is-quest-section';
+@import './sections/how-it-works-section';
+@import './sections/why-quest-section';
+@import './sections/contact-section';

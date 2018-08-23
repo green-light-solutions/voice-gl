@@ -1,0 +1,133 @@
+html body nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 25px 30px;
+  width: 100%;
+  opacity: 1;
+  transition: all .3s linear;
+
+  &.hidden {
+    opacity: 1;
+  }
+
+  h1 {
+    float: left;
+    margin: 6px 0;
+
+    @media screen and (max-width: $screen-sm) {
+      margin: 3px 0;
+    }
+
+    #logo {
+      transition: opacity .3s linear;
+      opacity: 1;
+
+      svg {
+        .letters,
+        .dot,
+        .icon {
+          transition: fill .3s linear;
+        }
+
+        .letters {
+          color: $color-white;
+        }
+
+        .dot,
+        .icon {
+          color: $color-primary;
+        }
+      }
+
+      &.delay {
+        transition-delay: $scrolling-speed;
+
+        svg {
+          .letters,
+          .dot,
+          .icon {
+            transition-delay: $scrolling-speed;
+          }
+        }
+      }
+
+      &.white svg {
+        .icon,
+        .dot {
+          fill: $color-white;
+        }
+      }
+
+      &.black svg .letters {
+        fill: $color-black;
+      }
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
+
+  #btn-ready {
+    float: right;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    background-color: $color-white;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 15px;
+
+    #logo,
+    #logo svg .letters,
+    #btn-ready,
+    & {
+      transition-delay: 0s !important;
+    }
+
+    #logo svg {
+      .icon {
+        display: block !important;
+        fill: $color-primary !important;
+      }
+
+      .letters {
+        fill: $color-black;
+      }
+    }
+
+    &.transparent {
+      background-color: transparent;
+      border-color: transparent;
+
+      #logo svg .letters {
+        fill: $color-white;
+      }
+    }
+
+    &.hidden {
+      display: block !important;
+      opacity: 0;
+    }
+
+    h1 {
+      #logo, #logo.black, #logo.white, #logo.hidden {
+        transition: opacity .3s linear;
+        opacity: 1;
+      }
+    }
+
+    #btn-ready {
+      opacity: 1;
+      display: block;
+      color: $color-primary;
+      border-color: $color-primary;
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
+}
