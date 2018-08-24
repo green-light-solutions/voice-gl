@@ -1,0 +1,63 @@
+.section.info-section {
+  background: url('../../assets/img/info-bg.jpg') no-repeat center #320441;
+  background-size: cover;
+  text-align: right;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    background-image: none;
+    padding-top: 0 !important;
+  }
+
+  .content-wrapper {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 0 20px;
+
+    .content {
+      max-width: 500px;
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+
+      h2 {
+        font-family: $font-proxima-nova;
+        font-weight: 300;
+        color: $color-white;
+        font-size: 3.6rem;
+        line-height: 5.2rem;
+      }
+
+      p {
+        font-family: $font-proxima-nova;
+        color: $color-white;
+        font-size: 1.8rem;
+        line-height: 3.4rem;
+      }
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      width: 100%;
+
+      .content {
+        text-align: center;
+        margin: 5rem 0;
+
+        h2 {
+          font-size: 3.2rem;
+          font-weight: 300;
+          line-height: 4.2rem;
+        }
+
+        p {
+          font-size: 1.8rem;
+          line-height: 3.4rem;
+        }
+      }
+    }
+  }
+}
