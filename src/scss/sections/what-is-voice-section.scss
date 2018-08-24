@@ -1,10 +1,10 @@
-.section.what-is-quest-section {
+.section.what-is-voice-section {
   position: relative;
   text-align: center;
   background-color: $color-white;
 
   &::before {
-    content: 'What is Quest?';
+    content: 'What is Voice?';
     position: absolute;
     top: 15%;
     width: 85%;
@@ -29,7 +29,7 @@
     padding: 0 20px;
 
     .content {
-      width: 520px;
+      width: 490px;
       max-width: 100%;
       display: inline-block;
       text-align: left;
@@ -51,62 +51,46 @@
         line-height: 3.9rem;
         margin-bottom: 3rem;
         font-weight: lighter;
+
+        &:last-child {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+        }
       }
     }
   }
 
-  .quest-device-preview {
+  .voice-device-preview {
     position: absolute;
-    bottom: 0;
-    right: calc(30% - 380px);
+    bottom: 23%;
+    right: calc(30% - 480px);
     max-height: 90%;
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: transform .6s ease-in $scrolling-speed, opacity 1s ease-in $scrolling-speed;
     opacity: 0;
 
-    .animation-wrapper > img {
+    img {
       display: block;
+      width: 90%;
     }
 
-    .icon {
-      position: absolute;
-      opacity: 0;
-      transition: opacity .7s ease-in-out $scrolling-speed;
-      transform: translateY(-50%) translateX(-50%);
+    @media screen and (max-width: $screen-lg-min) {
+      right: calc(30% - 520px);
 
-      &:first-child {
-        top: 2%;
-        left: 50%;
-        transition-delay: 1.5s;
-      }
-
-      &:nth-child(2) {
-        top: 25%;
-        left: 95%;
-        transition-delay: 1.8s;
-      }
-
-      &:nth-child(3) {
-        top: 65%;
-        left: 92%;
-        transition-delay: 2.1s;
-      }
-
-      &:nth-child(4) {
-        top: 65%;
-        left: 11%;
-        transition-delay: 2.3s;
-      }
-
-      &:nth-child(5) {
-        top: 25%;
-        left: 7%;
-        transition-delay: 2.6s;
+      img {
+        width: 70%;
       }
     }
+
+    @media screen and (max-width: $screen-md-min) {
+      img {
+        width: 100%;
+      }
+    }
+
   }
 
-  &.active .quest-device-preview {
+  &.active .voice-device-preview {
     transform: translateY(0);
     opacity: 1;
 
@@ -130,25 +114,32 @@
     .content-wrapper {
       margin-top: 3rem;
       width: 100%;
+      background: url('/assets/img/phone-logo-bg.png') top center no-repeat;
 
       .content {
+        text-align: center;
         opacity: 1;
 
         h2 {
-          font-size: 3rem;
-          line-height: 3rem;
+          font-size: 3.2rem;
+          line-height: 4.9rem;
           margin-bottom: 4rem;
         }
 
         p {
-          font-size: 1.7rem;
-          line-height: 2.7rem;
+          font-size: 2.4rem;
+          line-height: 3.8rem;
           margin-bottom: 3rem;
+
+          &:last-child {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+          }
         }
       }
     }
 
-    .quest-device-preview {
+    .voice-device-preview {
       display: block;
       right: auto;
       position: relative;
@@ -157,7 +148,7 @@
       opacity: 1;
       width: 100vw;
       padding: 0 4rem;
-      margin-top: -2rem;
+      margin: -2rem 0 7rem;
 
       .animation-wrapper {
         position: relative;

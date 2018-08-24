@@ -49,7 +49,7 @@ html {
 }
 
 @media screen and (max-width: $screen-sm) {
-  .section.why-quest-section {
+  .section.why-voice-section {
     height: auto !important;
     padding: 0 0 60px;
 
@@ -60,7 +60,8 @@ html {
 }
 
 @import './sections/introduction-section';
-@import './sections/what-is-quest-section';
+@import 'sections/what-is-voice-section';
+@import './sections/info-section';
 @import './sections/how-it-works-section';
-@import './sections/why-quest-section';
+@import './sections/why-voice-section';
 @import './sections/contact-section';

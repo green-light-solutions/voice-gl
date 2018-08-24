@@ -52,9 +52,10 @@
     $('#fullpage').fullpage({
       anchors: [
         'introduction',
-        'what-is-quest',
+        'what-is-voice',
+        'info',
         'how-it-works',
-        'why-quest',
+        'why-voice',
         'contact',
       ],
       slidesNavigation: true,
@@ -73,19 +74,19 @@
         }
 
         if (nextIndex === 1) {
-          btnReady.addClass('btn-primary');
           navbar.addClass('transparent');
-          btnReady.addClass('btn-link');
         } else {
           navbar.removeClass();
         }
 
-        if (nextIndex === 2 || nextIndex === 4) {
+        if (nextIndex === 2 || nextIndex === 4 || nextIndex === 5) {
           btnReady.addClass('btn-primary');
           logo.addClass('black');
-        } else if (nextIndex === 3) {
+        } else if (nextIndex === 4) {
           logo.addClass('white');
           window.gtag('event', 'video', {'event_category': 'play' });
+        } else if (nextIndex > 5) {
+          btnReady.addClass('hidden');
         }
       },
     });

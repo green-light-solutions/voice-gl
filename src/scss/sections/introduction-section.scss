@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    background: url('../../assets/img/quest-hero-bg.jpg') no-repeat center;
+    background: url('../../assets/img/voice-hero-bg.jpg') no-repeat center;
     background-size: cover;
     animation: zoom 60s infinite linear;
   }
@@ -42,10 +42,14 @@
     }
 
     h2 {
-      font-size: 9rem;
+      font-size: 7.8rem;
       font-weight: bold;
-      line-height: 9rem;
+      line-height: 7.8rem;
       margin-bottom: 2.5rem;
+
+      br {
+        display: none;
+      }
     }
 
     h3 {
@@ -55,12 +59,6 @@
       color: #e0e0e0;
       font-weight: lighter;
       margin-bottom: 1.5rem;
-
-      .highlighted {
-        margin-top: 1.5rem;
-        color: $color-primary;
-        display: block;
-      }
     }
   }
 
@@ -69,18 +67,22 @@
       margin-bottom: 8rem;
 
       img {
-        height: 60px;
+        display: none;
       }
 
       h2 {
-        font-size: 5rem;
-        line-height: 5rem;
+        font-size: 4rem;
+        line-height: 5.2rem;
         margin-bottom: 2rem;
+
+        br {
+          display: inline;
+        }
       }
 
       h3 {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 2.3rem;
+        line-height: 3.2rem;
 
         .highlighted {
           display: inline;

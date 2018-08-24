@@ -1,9 +1,9 @@
-.section.why-quest-section {
+.section.why-voice-section {
   text-align: center;
   position: relative;
 
   &::before {
-    content: 'What can Quest do for your company?';
+    content: 'Voice helps your brand with:';
     text-align: center;
     position: absolute;
     top: 10%;
@@ -18,6 +18,25 @@
     opacity: .5;
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../../assets/img/path.png') no-repeat center;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .6s ease-in;
+    transition-delay: 2s;
+
+    @media screen and (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+
   h2 {
     position: relative;
     font-family: $font-europa;
@@ -25,14 +44,20 @@
     font-weight: bold;
     font-size: 5.5rem;
     line-height: 6.8rem;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     max-width: 1000px;
     display: inline-block;
   }
 
-  &.active .icons .icon {
-    transform: translateY(0);
-    opacity: 1;
+  &.active {
+    .icons .icon {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 
   .icons {
@@ -41,6 +66,7 @@
     margin: auto;
     max-width: 1500px;
     padding: 0 20px;
+    position: relative;
 
     .icon {
       flex: 1 1 auto;
@@ -50,6 +76,10 @@
 
       &:nth-child(2) {
         transition-delay: .9s;
+
+        .content h3 {
+          width: 200px;
+        }
       }
 
       &:nth-child(3) {
@@ -61,7 +91,7 @@
       }
 
       .content {
-        width: 230px;
+        width: 240px;
         max-width: 100%;
         display: inline-block;
         margin: 50px 0;
@@ -78,9 +108,9 @@
         h3 {
           font-size: 2.4rem;
           font-weight: 600;
-          line-height: 6rem;
+          line-height: 3.6rem;
           color: $color-gray;
-          text-transform: uppercase;
+          margin: 0 auto 1.5rem;
         }
 
         .label {
@@ -101,6 +131,10 @@
       opacity: 1;
     }
 
+    &::after {
+      opacity: 1;
+    }
+
     h2 {
       font-size: 2.7rem;
       line-height: 3.2rem;
@@ -118,6 +152,10 @@
       .content {
         margin: 0;
         width: 100%;
+
+        h3 {
+          width: auto !important;
+        }
       }
     }
   }
