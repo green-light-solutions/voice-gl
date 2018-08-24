@@ -52,7 +52,7 @@
     $('#fullpage').fullpage({
       anchors: [
         'introduction',
-        'what-is-quest',
+        'what-is-voice',
         'info',
         'how-it-works',
         'why-voice',
@@ -79,7 +79,7 @@
           navbar.removeClass();
         }
 
-        if (nextIndex === 2 || nextIndex === 5) {
+        if (nextIndex === 2 || nextIndex === 4 || nextIndex === 5) {
           btnReady.addClass('btn-primary');
           logo.addClass('black');
         } else if (nextIndex === 4) {
