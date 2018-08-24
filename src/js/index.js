@@ -53,8 +53,9 @@
       anchors: [
         'introduction',
         'what-is-quest',
+        'info',
         'how-it-works',
-        'why-quest',
+        'why-voice',
         'contact',
       ],
       slidesNavigation: true,
@@ -80,13 +81,13 @@
           navbar.removeClass();
         }
 
-        if (nextIndex === 2 || nextIndex === 4) {
+        if (nextIndex === 2 || nextIndex === 3 || nextIndex === 5) {
           btnReady.addClass('btn-primary');
           logo.addClass('black');
-        } else if (nextIndex === 3) {
+        } else if (nextIndex === 4) {
           logo.addClass('white');
           window.gtag('event', 'video', {'event_category': 'play' });
-        } else if (nextIndex > 4) {
+        } else if (nextIndex > 5) {
           btnReady.addClass('hidden');
         }
       },
