@@ -2,14 +2,20 @@
   background: url('../../assets/img/info-bg.jpg') no-repeat center #320441;
   background-size: cover;
   text-align: right;
+  z-index: 1;
 
   img {
     width: 100%;
+    display: none;
   }
 
-  @media screen and (max-width: $screen-sm-max) {
+  @media screen and (max-width: $screen-sm) {
     background-image: none;
     padding-top: 0 !important;
+
+    img {
+      display: inline-block;
+    }
   }
 
   .content-wrapper {
@@ -40,7 +46,7 @@
       }
     }
 
-    @media screen and (max-width: $screen-sm-max) {
+    @media screen and (max-width: $screen-sm) {
       width: 100%;
 
       .content {
