@@ -74,14 +74,12 @@
         }
 
         if (nextIndex === 1) {
-          btnReady.addClass('btn-primary');
           navbar.addClass('transparent');
-          btnReady.addClass('btn-link');
         } else {
           navbar.removeClass();
         }
 
-        if (nextIndex === 2 || nextIndex === 3 || nextIndex === 5) {
+        if (nextIndex === 2 || nextIndex === 5) {
           btnReady.addClass('btn-primary');
           logo.addClass('black');
         } else if (nextIndex === 4) {
