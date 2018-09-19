@@ -2,7 +2,6 @@
   $(document).ready(() => {
     const logo = $('#logo');
     const btnReady = $('#btn-ready');
-    const contactForm = $('#contact-form');
     const navbar = $('nav');
     const jDocument = $(document);
     const jWindow = $(window);
@@ -25,28 +24,6 @@
       }
 
       lastScrollTop = scrollTop;
-    });
-
-    contactForm.submit(e => {
-      e.preventDefault();
-      window.gtag('event', 'submit', {'event_category': 'signup' });
-
-      $.ajax({
-        type: 'POST',
-        contentType: 'application/json',
-        url: config.apiUrl + '/marketing-data/contacts',
-        data: JSON.stringify({ email: contactForm.find('#user-input-email').val() }),
-        dataType: 'json',
-        success: () => {
-          $('#output-message-heading').text('We appreciate your interest in Quest');
-          $('#output-message').text('Our team will be in touch with you soon to schedule a demo.');
-          contactForm.hide();
-        },
-        error: () => {
-          $('#output-message-heading').text('Sorry');
-          $('#output-message').text('We encountered some kind of error. Please try again later');
-        },
-      });
     });
 
     $('#fullpage').fullpage({

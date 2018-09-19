@@ -1,0 +1,9 @@
+<svg width="80" height="15" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#1a1a00" fill-rule="evenodd">
+        <text font-family="ProximaNova-Regular, Proxima Nova" font-size="14" transform="translate(0 -2)">
+            <tspan x="26" y="14">VOICE.gl</tspan>
+        </text>
+        <path d="M14.151 0L8.267 10.676 2.383 0H0l7.076 12.838L8.267 15l1.192-2.162L16.534 0z"/>
+        <path d="M9.97 0L8.267 3.089 6.565 0H4.182l2.894 5.25 1.191 2.163L9.46 5.25 12.353 0z"/>
+    </g>
+</svg>

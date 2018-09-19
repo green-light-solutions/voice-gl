@@ -5,39 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Voice.gl</title>
   <base href="/"/>
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:906343,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117349428-2"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125174600-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { dataLayer.push(arguments); };
+    function gtag() {dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-117349428-2');
+    gtag('config', 'UA-125174600-1');
   </script>
-  <script src="lib.min.js"></script>
-  <script src="bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI=" crossorigin="anonymous"></script>
+  <script src="bundle.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha256-l0tJvh77claYa8GowKaFNxtuRWZICtwHTk7+0tgsiZY=" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="bundle.min.css"/>
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <nav class="transparent">
     <h1>
-      <a href="#introduction" id="logo" class="hidden"><img src="/assets/img/logo.svg" alt="Quest.gl"/></a>
+      <a href="#introduction" id="logo" class="hidden"><img src="/assets/img/logo.svg" alt="Voice.gl"/></a>
     </h1>
     <a href="#contact" class="btn" id="btn-ready">I'm ready for a demo</a>
   </nav>
   <div id="fullpage">
     <div class="section introduction-section">
       <div class="headings">
-        <img src="/assets/img/logo.svg" alt="Quest.gl"/>
+        <img src="/assets/img/logo.svg" alt="Voice.gl"/>
         <h2>The easy way<br> to tell your<br> amazing<br> brand stories,<br> in-store.</h2>
         <h3>Intuitive digital platform for flawless customer experience.</h3>
       </div>
@@ -156,29 +149,13 @@
           </div>
         </div>
         <footer>
-          <div class="footer-left">
-            <div class="green-light">
-              <div class="gl-logo-wrap">
-                <a href="https://green-light.com/" target="_blank">
-                  <img src="assets/img/gl-logo.svg" alt="green-light.com">
-                </a>
-              </div>
-              <div class="desktop">
-                <p>
-                  We are an international team of tech pioneers, creatives and coding wizards building technology solutions that make life and work better.
-                </p>
-                <a class="gl-link" href="https://green-light.com/" target="_blank">Green-light.com <img class="right-arrow" src="assets/img/arrow-left.svg"></a>
-                <p>
-                  Want to know what it's like working with Greenlight?<br/>Check out our <a href="https://www.cocuma.cz/company/greenlight" target="_blank">Cocuma page</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-right desktop">
-            <a href="https://twitter.com/GreenlightGLS" target="_blank"><i class="fa fa-fw fa-twitter-square"></i></a>
-            <a href="https://www.facebook.com/Greenlight-1143592165731435/" target="_blank"><i class="fa fa-fw fa-facebook-square"></i></a>
-            <a href="https://www.linkedin.com/company/15180754/" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i></a>
-          </div>
+          <ul class="logos">
+            <li><a href="#"><img src="/assets/img/footer/vibe.svg" alt="Vibe"></a></li>
+            <li><a href="http://quest.gl" target="_blank"><img src="/assets/img/footer/quest.svg" alt="Quest"></a></li>
+            <li><a href="http://voice.gl" target="_blank"><img src="/assets/img/footer/voice.svg" alt="Voice"></a></li>
+            <li><a href="http://loop.gl" target="_blank"><img src="/assets/img/footer/loop.svg" alt="Loop"></a></li>
+          </ul>
+          <a href="http://green-light.com" target="_blank"><img src="/assets/img/footer/created-by-gl.svg" alt="created by Greenligh"></a>
         </footer>
       </div>
     </div>

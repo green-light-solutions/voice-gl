@@ -1,0 +1,10 @@
+<svg width="83" height="16" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#9F9F9F">
+            <text font-family="ProximaNova-Regular, Proxima Nova" font-size="14" transform="translate(0 -1)">
+                <tspan x="25" y="14">QUEST.gl</tspan>
+            </text>
+            <path d="M2.487 8a5.513 5.513 0 1 1 11.026 0A5.513 5.513 0 0 1 2.487 8M16 8a8 8 0 1 0-8 8h8v-2.487h-2.203A7.973 7.973 0 0 0 16 8"/>
+        </g>
+    </g>
+</svg>
