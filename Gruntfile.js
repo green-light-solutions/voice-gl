@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['<%= paths.src.js %>'],
-        tasks: ['uglify:main'],
+        tasks: ['browserify'],
         options: {
           spawn: false,
         },
