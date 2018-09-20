@@ -1,6 +1,7 @@
 (() => {
   $(document).ready(() => {
     const logo = $('#logo');
+    const footerLogos = $('.footer-logo');
     const btnReady = $('#btn-ready');
     const navbar = $('nav');
     const jDocument = $(document);
@@ -8,6 +9,12 @@
 
     $.get('/assets/img/logo.svg', response => {
       logo.html(jQuery(response).find('svg'));
+    }, 'xml');
+
+    footerLogos.each((index, element) => {
+      $.get(element.firstChild.src, res => {
+        $(element).html(jQuery(res).find('svg'));
+      });
     }, 'xml');
 
     let lastScrollTop = 0;

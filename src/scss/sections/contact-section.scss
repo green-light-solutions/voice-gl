@@ -153,6 +153,10 @@ $footer-height-mobile: 60px;
             font-size: 1.4rem;
             line-height: 1.7rem;
             text-decoration: none;
+
+            .footer-logo-svg:hover {
+              fill: #1a1a1a;
+            }
           }
         }
       }
