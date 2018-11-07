@@ -24,11 +24,11 @@
       $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: window.config.apiUrl + '/marketing-data/contacts',
+        url: window.config.apiUrl + '/marketing-data/contacts?api-token=ced834c4d34e6b88541bbd2160619335',
         data: JSON.stringify({
           email: contactForm.find('#input-email').val(),
-          organizationName: contactForm.find('#input-company-name').val(),
-          ownerName: contactForm.find('#input-name').val(),
+          // organizationName: contactForm.find('#input-company-name').val(),
+          // ownerName: contactForm.find('#input-name').val(),
         }),
         dataType: 'json',
         success: () => {
