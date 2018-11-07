@@ -1,4 +1,4 @@
-$footer-height: 150px;
+$footer-height: 75px;
 $footer-height-mobile: 60px;
 
 .section.contact-section {
@@ -24,7 +24,8 @@ $footer-height-mobile: 60px;
         transform: translateY(-50%) translateX(-50%);
         text-align: center;
         color: $color-white;
-        width: 100%;
+        width: 980px;
+        max-width: 100%;
         padding: 0 20px;
 
         h2 {
