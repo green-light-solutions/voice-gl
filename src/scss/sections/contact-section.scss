@@ -54,63 +54,31 @@ $footer-height-mobile: 60px;
         }
 
         .input-wrapper {
-          background-color: $color-white;
-          border-radius: 30px;
-          padding: 2px;
-          width: 600px;
-          max-width: 100%;
-          position: relative;
-          display: inline-block;
+          padding: 20px;
+          border-radius: 2px;
+          background: rgba($color-black, .4);
+          display: flex;
 
-          .form-btn {
-            border-radius: 26px;
-            background-color: $color-primary;
-            width: 110px;
-            font-size: 2rem;
-            font-weight: bold;
-            line-height: 49px;
-            color: $color-white;
-            text-transform: uppercase;
+          .field, button {
+            flex: 1 1 auto;
+            margin: 5px;
+            font-size: 16px;
+            line-height: 19px;
+            height: 50px;
             border: 0;
-            outline: 0;
-            cursor: pointer;
-
-            .fa {
-              position: relative;
-              left: -1px;
-            }
-
-            @media screen and (max-width: $screen-sm-max) {
-              width: auto;
-              padding: 0 15px;
-              position: relative;
-              top: 2px;
-
-              span {
-                display: none;
-              }
-            }
-
-            @media screen and (min-width: $screen-md-min) {
-              .fa {
-                display: none;
-              }
-            }
+            border-radius: 2px;
           }
 
           .field {
-            height: 55px;
-            border: 0;
-            outline: 0;
-            font-size: 2rem;
-            width: calc(100% - 132px);
-            background-color: $color-white !important;
-            margin-left: 12px;
-            border-radius: 26px;
+            background-color: $color-white;
+            padding: 13px 30px 11px 17px;
+          }
 
-            &::placeholder {
-              color: #a8a8a8;
-            }
+          button {
+            flex: 1 1 auto;
+            width: 111px;
+            background-color: $color-primary;
+            color: $color-white;
           }
         }
       }
@@ -122,7 +90,7 @@ $footer-height-mobile: 60px;
       padding: 0 10%;
       background-color: $color-white;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       flex-flow: column;
 
@@ -169,6 +137,10 @@ $footer-height-mobile: 60px;
         }
       }
 
+      a {
+        margin: 15px;
+      }
+
       @media screen and (max-width: $screen-xs-max) {
         flex: 0 0 auto;
 
@@ -195,6 +167,8 @@ $footer-height-mobile: 60px;
     }
 
     @media screen and (max-width: $screen-sm-max) {
+      height: 110%;
+
       .content-wrapper {
         .content {
           width: 100%;
@@ -219,9 +193,13 @@ $footer-height-mobile: 60px;
             margin-bottom: 5rem;
           }
 
-          .input-wrapper .field {
-            width: calc(100% - 72px);
-            font-size: 1.4rem;
+          .input-wrapper {
+            flex-direction: column;
+            padding: 12px 12px 18px;
+
+            .form-btn {
+              width: auto;
+            }
           }
         }
       }
