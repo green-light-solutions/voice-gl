@@ -1,3 +1,3 @@
-const config = {
+window.config = {
   apiUrl: 'https://api.magic-dev.gl.com',
 };

@@ -24,7 +24,7 @@
       $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: config.apiUrl + '/marketing-data/contacts',
+        url: window.config.apiUrl + '/marketing-data/contacts',
         data: JSON.stringify({
           email: contactForm.find('#input-email').val(),
           organizationName: contactForm.find('#input-company-name').val(),
