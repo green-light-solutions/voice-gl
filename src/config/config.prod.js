@@ -1,3 +1,3 @@
 window.config = {
-  apiUrl: 'https://api.magic.gl.com',
+  apiUrl: 'https://api.magic.green-light.com',
 };
