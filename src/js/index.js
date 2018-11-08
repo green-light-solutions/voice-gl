@@ -24,15 +24,15 @@
       $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: window.config.apiUrl + '/marketing-data/contacts?api-token=ced834c4d34e6b88541bbd2160619335',
+        url: window.config.apiUrl + '/marketing-data/contacts',
         data: JSON.stringify({
           email: contactForm.find('#input-email').val(),
-          // organizationName: contactForm.find('#input-company-name').val(),
-          // ownerName: contactForm.find('#input-name').val(),
+          organizationName: contactForm.find('#input-company-name').val(),
+          ownerName: contactForm.find('#input-name').val(),
         }),
         dataType: 'json',
         success: () => {
-          $('#output-message-heading').text('We appreciate your interest in Quest');
+          $('#output-message-heading').text('We appreciate your interest in Voice');
           $('#output-message').text('Our team will be in touch with you soon to schedule a demo.');
           contactForm.hide();
         },
