@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['<%= paths.src.js %>'],
+            src: ['<%= paths.src.js %>', '<%= paths.src.config %>'],
             dest: '<%= paths.dest.code %>/bundle.js',
           },
         ],
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         },
       },
       js: {
-        files: ['<%= paths.src.js %>'],
+        files: ['<%= paths.src.js %>', '<%= paths.src.config %>'],
         tasks: ['browserify'],
         options: {
           spawn: false,
