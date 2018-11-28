@@ -35,6 +35,7 @@
         success: () => {
           $('#output-message-heading').text('We appreciate your interest in Voice');
           $('#output-message').text('Our team will be in touch with you soon to schedule a demo.');
+          $('#output-text').hide();
           contactForm.hide();
         },
         error: () => {
