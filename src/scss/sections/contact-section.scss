@@ -1,4 +1,4 @@
-$footer-height: 75px;
+$footer-height: 55px;
 $footer-height-mobile: 60px;
 
 .section.contact-section {
@@ -29,10 +29,10 @@ $footer-height-mobile: 60px;
         padding: 0 20px;
 
         h2 {
-          font-size: 45px;
+          font-size: 43px;
           font-weight: bold;
-          line-height: 8.1rem;
-          margin-bottom: 2.2rem;
+          line-height: 50px;
+          margin-bottom: 2rem;
         }
 
         h3 {
@@ -41,7 +41,7 @@ $footer-height-mobile: 60px;
           line-height: 3.7rem;
           color: #e0e0e0;
           font-weight: lighter;
-          margin: 15px 0;
+          margin: 10px 0;
         }
 
         h4 {
@@ -55,9 +55,9 @@ $footer-height-mobile: 60px;
         }
 
         p {
-          font-size: 16px;
-          line-height: 25px;
-          padding: 0 70px 20px;
+          font-size: 15px;
+          line-height: 22px;
+          padding: 0 70px 10px;
         }
 
         .input-wrapper {
@@ -72,7 +72,7 @@ $footer-height-mobile: 60px;
 
           .form-btn {
             width: 120px;
-            margin: 15px auto 0;
+            margin: 10px auto 0;
             height: 45px;
           }
 
