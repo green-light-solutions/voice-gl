@@ -29,11 +29,13 @@
           email: contactForm.find('#input-email').val(),
           organizationName: contactForm.find('#input-company-name').val(),
           ownerName: contactForm.find('#input-name').val(),
+          phoneNumber: contactForm.find('#input-phone').val(),
         }),
         dataType: 'json',
         success: () => {
           $('#output-message-heading').text('We appreciate your interest in Voice');
           $('#output-message').text('Our team will be in touch with you soon to schedule a demo.');
+          $('#output-text').hide();
           contactForm.hide();
         },
         error: () => {
