@@ -231,13 +231,14 @@ $footer-height-mobile: 60px;
           .input-wrapper {
             flex-direction: column;
             padding: 12px 12px 18px;
+            width: 100%;
 
             .field {
               width: calc(100% - 8px);
             }
 
             .form-btn {
-              width: auto;
+              width: calc(100% - 8px);
             }
           }
 
