@@ -18,6 +18,14 @@
     //   });
     // }, 'xml');
 
+    btnReady.click(() => {
+      $('html, body').animate({
+        scrollTop: $('.contact-section').offset().top,
+      }, 1200, () => {
+        $('#input-company-name').focus();
+      });
+    });
+
     contactForm.submit(e => {
       e.preventDefault();
       window.gtag('event', 'submit', {'event_category': 'signup' });
