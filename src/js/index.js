@@ -8,6 +8,10 @@
     const jDocument = $(document);
     const jWindow = $(window);
 
+    if (window.location.href.match(/\/demo$/i)) {
+      window.location.href = window.config.hockeyappUrl;
+    }
+
     $.get('/assets/img/logo.svg', response => {
       logo.html(jQuery(response).find('svg'));
     }, 'xml');
