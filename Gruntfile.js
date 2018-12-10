@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   const env = grunt.option('env') || 'dev';
+  const rewrite = require('connect-modrewrite');
 
   grunt.initConfig({
     paths: {
@@ -104,6 +105,14 @@ module.exports = function(grunt) {
           base: ['dist'],
           open: true,
           livereload: true,
+          middleware: function(connect, options, middlewares) {
+            // 1. mod-rewrite behavior
+            var rules = [
+              '!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html'
+            ];
+            middlewares.unshift(rewrite(rules));
+            return middlewares;
+          },
         },
       },
     },
