@@ -32,7 +32,6 @@
 
     contactForm.submit(e => {
       e.preventDefault();
-      window.gtag('event', 'submit', {'event_category': 'signup' });
       $.ajax({
         type: 'POST',
         contentType: 'application/json',
@@ -49,6 +48,7 @@
           $('#output-message').text('Our team will be in touch with you soon to schedule a demo.');
           $('#output-text').hide();
           contactForm.hide();
+          // window.gtag('event', 'submit', {'event_category': 'signup' });
         },
         error: () => {
           $('#output-message-heading').text('Sorry');
@@ -108,7 +108,7 @@
           logo.addClass('black');
         } else if (nextIndex === 4) {
           logo.addClass('white');
-          window.gtag('event', 'video', {'event_category': 'play' });
+          // window.gtag('event', 'video', {'event_category': 'play' });
         } else if (nextIndex > 5) {
           btnReady.addClass('hidden');
         }
