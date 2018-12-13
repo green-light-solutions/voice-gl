@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         scss: 'src/scss/main.scss',
       },
       dest: {
-        code: 'dist'
+        code: 'dist',
       },
     },
     copy: {
@@ -33,14 +33,14 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: ['**/*.html', '*.html'],
-          dest: '<%= paths.dest.code %>'
-        }]
+          dest: '<%= paths.dest.code %>',
+        }],
       },
     },
     browserify: {
       dist: {
         options: {
-          transform: [["babelify", { "stage": 0 }]]
+          transform: [['babelify', { 'stage': 0 }]],
         },
         files: [
           {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
             dest: '<%= paths.dest.code %>/bundle.js',
           },
         ],
-      }
+      },
     },
     sass: {
       main: {
@@ -107,10 +107,9 @@ module.exports = function(grunt) {
           livereload: true,
           middleware: function(connect, options, middlewares) {
             // 1. mod-rewrite behavior
-            var rules = [
-              '!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html'
-            ];
-            middlewares.unshift(rewrite(rules));
+            middlewares.unshift(rewrite([
+              '!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html',
+            ]));
             return middlewares;
           },
         },
@@ -131,8 +130,8 @@ module.exports = function(grunt) {
     githooks: {
       all: {
         'pre-commit': 'lint',
-      }
-    }
+      },
+    },
   });
 
   grunt.registerTask('lint', ['eslint', 'sasslint']);

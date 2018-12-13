@@ -12,6 +12,16 @@
       window.location.href = window.config.hockeyappUrl;
     }
 
+    // add HubSpot tracking script
+    if (window.config.env === 'prod') {
+      const script = document.createElement('script');
+      script.async = true;
+      script.defer = true;
+      script.id = 'hs-script-loader';
+      script.src = '//js.hs-scripts.com/4454733.js';
+      document.body.appendChild(script);
+    }
+
     $.get('/assets/img/logo.svg', response => {
       logo.html(jQuery(response).find('svg'));
     }, 'xml');
