@@ -86,9 +86,17 @@
     $('#fullpage').fullpage({
       anchors: [
         'introduction',
-        'what-is-voice',
+        'catalog-1',
+        'catalog-2',
+        'catalog-3',
+        'catalog-4',
+        'expectation',
         'info',
-        'how-it-works',
+        'customers',
+        'in-store',
+        'global-campaigns',
+        'growth',
+        'life-easier',
         'why-voice',
         'contact',
       ],
@@ -113,7 +121,8 @@
           navbar.removeClass();
         }
 
-        if (nextIndex === 2 || nextIndex === 4 || nextIndex === 5) {
+        if (nextIndex === 2 || nextIndex === 3 || nextIndex === 4 || nextIndex === 5 || nextIndex === 6
+          || nextIndex === 8 || nextIndex === 10 || nextIndex === 11 || nextIndex === 12 || nextIndex === 13) {
           btnReady.addClass('btn-primary');
           logo.addClass('black');
         } else if (nextIndex === 4) {
