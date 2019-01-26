@@ -3,22 +3,6 @@
   position: relative;
   background-color: $color-white;
 
-  &::before {
-    content: 'Voice helps your brand with:';
-    text-align: center;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    font-family: $font-europa;
-    font-size: 15.5rem;
-    font-weight: bold;
-    line-height: 16rem;
-    max-height: 32rem;
-    overflow-y: hidden;
-    color: #eee;
-    opacity: .5;
-  }
-
   .path {
     position: absolute;
     width: 100%;

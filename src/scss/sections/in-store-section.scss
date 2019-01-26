@@ -1,7 +1,7 @@
-.section.info-section {
-  background: url('../../assets/img/info-bg.jpg') no-repeat center #320441;
+.section.in-store-section {
+  background: url('../../assets/img/in-store/in-store-bg.jpg') no-repeat center #320441;
   background-size: cover;
-  text-align: right;
+  text-align: left;
   z-index: 1;
 
   img {
@@ -10,7 +10,6 @@
   }
 
   @media screen and (max-width: $screen-sm) {
-    background-image: none;
     padding-top: 0 !important;
 
     img {
@@ -18,20 +17,24 @@
     }
   }
 
+  .fp-tableCell {
+    vertical-align: bottom;
+  }
+
   .content-wrapper {
     width: 50%;
     display: inline-block;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 20px 60px;
 
     .content {
-      max-width: 540px;
+      max-width: 500px;
       width: 100%;
       display: inline-block;
       text-align: left;
-      letter-spacing: -0.5px;
 
       h2 {
+        font-family: $font-proxima-nova;
         color: $color-white;
         font-size: 52px;
         line-height: 62px;
