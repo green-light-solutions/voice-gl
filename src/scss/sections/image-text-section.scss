@@ -29,6 +29,11 @@
     top: 50%;
     transform: translateY(-50%);
     right: 53%;
+    height: 70%;
+
+    img {
+      height: 100%;
+    }
   }
 
   @media screen and (max-width: $screen-sm-max) {
