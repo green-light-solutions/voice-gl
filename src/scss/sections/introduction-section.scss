@@ -4,6 +4,10 @@
   position: relative;
   overflow: hidden;
 
+  .fp-tableCell {
+    vertical-align: top;
+  }
+
   .btn-primary {
     position: absolute;
     top: 10px;
@@ -42,11 +46,11 @@
     }
 
     h2 {
-      font-size: 7.8rem;
+      font-size: 5.2rem;
       font-weight: bold;
       line-height: 7.8rem;
       width: 80%;
-      margin: 0 auto 2.5rem;
+      margin: 40px auto 0;
 
       br {
         display: none;
@@ -64,6 +68,10 @@
   }
 
   @media screen and (max-width: $screen-sm-max) {
+    &::before {
+      animation: none;
+    }
+
     .headings {
       margin-bottom: 8rem;
 
@@ -72,9 +80,9 @@
       }
 
       h2 {
-        font-size: 4rem;
-        line-height: 5.2rem;
-        margin-bottom: 2rem;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 40px auto 0;
         width: 100%;
 
         br {

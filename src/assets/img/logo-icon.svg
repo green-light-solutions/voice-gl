@@ -1,3 +1,16 @@
-<svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.352 14c0-5.328 4.32-9.648 9.648-9.648A9.648 9.648 0 0 1 23.648 14c0 5.328-4.32 9.648-9.648 9.648-5.328 0-9.648-4.32-9.648-9.648M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14h14v-4.352h-3.855A13.952 13.952 0 0 0 28 14" fill="#FF7C00" fill-rule="evenodd"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="78px" viewBox="0 0 79 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voice-microsite-jan19" transform="translate(-681.000000, -1896.000000)" fill="#C456E8" fill-rule="nonzero">
+            <g id="03" transform="translate(166.000000, 1896.000000)">
+                <g id="Group-8" transform="translate(515.000000, 0.000000)">
+                    <polygon id="Shape" points="67.6125393 0 39.4979651 55.5189134 11.3833909 0 0 0 33.8042347 66.7594567 39.4979651 78 45.1916954 66.7594567 79 0"></polygon>
+                    <polygon id="Shape" points="47.6248306 0 39.4979673 15.8333333 31.3751694 0 20 0 33.8103826 26.9187473 39.4979673 38 45.185552 26.9187473 59 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>
