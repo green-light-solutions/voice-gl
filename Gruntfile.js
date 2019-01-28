@@ -108,7 +108,7 @@ module.exports = function(grunt) {
           middleware: function(connect, options, middlewares) {
             // 1. mod-rewrite behavior
             middlewares.unshift(rewrite([
-              '!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html',
+              '!\\.eot\\.woff|\\.woff2|\\.otf|\\.ttf|\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html',
             ]));
             return middlewares;
           },
