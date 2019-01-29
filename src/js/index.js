@@ -128,6 +128,8 @@
         } else if (nextIndex === 4) {
           logo.addClass('white');
           // window.gtag('event', 'video', {'event_category': 'play' });
+        } else if (nextIndex === 7 || nextIndex === 9) {
+          btnReady.removeClass('btn-primary');
         } else if (nextIndex > 5) {
           btnReady.addClass('hidden');
         }
