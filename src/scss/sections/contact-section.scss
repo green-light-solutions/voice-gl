@@ -225,6 +225,8 @@ $footer-height-mobile: 60px;
           }
 
           p {
+            font-size: 1.8rem;
+            line-height: 3.4rem;
             padding: 0 0 20px;
           }
 
@@ -248,6 +250,6 @@ $footer-height-mobile: 60px;
   }
 
   @media screen and (max-width: $screen-sm-max) {
-    height: 835px !important;
+    height: calc(100vh + #{$footer-height}) !important;
   }
 }
