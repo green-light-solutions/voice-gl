@@ -51,7 +51,7 @@
       line-height: 64px;
       letter-spacing: -1.33px;
       width: 80%;
-      margin: 40px auto 0;
+      margin: 10vh auto 0;
 
       br {
         display: none;
@@ -68,11 +68,19 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-max) {
+  @media screen and (max-width: $screen-md-max) {
     &::before {
       animation: none;
     }
 
+    .headings {
+      h2 {
+        margin-top: 6vh;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
     .headings {
       margin-bottom: 8rem;
 
@@ -83,7 +91,7 @@
       h2 {
         font-size: 25px;
         line-height: 30px;
-        margin: 40px auto 0;
+        margin: 4vh auto 0;
         width: 100%;
 
         br {
