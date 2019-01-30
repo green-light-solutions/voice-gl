@@ -81,6 +81,11 @@
   }
 
   @media screen and (max-width: $screen-sm-max) {
+    &::before {
+      background: url('../../assets/img/voice-hero-bg-mobile.jpg') no-repeat center;
+      background-size: cover;
+    }
+
     .headings {
       margin-bottom: 8rem;
 
@@ -91,7 +96,7 @@
       h2 {
         font-size: 25px;
         line-height: 30px;
-        margin: 4vh auto 0;
+        margin: 12vh auto 0;
         width: 100%;
 
         br {
