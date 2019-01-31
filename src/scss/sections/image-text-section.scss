@@ -33,6 +33,7 @@
 
     img {
       height: 100%;
+      float: right;
     }
   }
 
@@ -68,6 +69,7 @@
       img {
         max-width: 80%;
         height: auto;
+        float: none;
       }
     }
   }

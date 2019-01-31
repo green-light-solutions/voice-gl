@@ -1,4 +1,6 @@
 .section.catalog-section {
+  background-color: $color-white;
+
   .content-wrapper {
     width: 40%;
     padding: 0 0 0 20px;
@@ -11,9 +13,10 @@
         list-style-type: none;
 
         li {
-          margin: 23px 0;
+          margin: 45px 0;
           font-size: 24px;
           line-height: 29px;
+          letter-spacing: .3px;
           display: flex;
 
           .category-name {
