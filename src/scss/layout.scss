@@ -1,13 +1,15 @@
-.display-table {
-  display: table;
-  width: 100%;
+#main-content {
+  overflow: hidden;
 
-  .display-table-row {
-    display: table-row;
-  }
+  .section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 55px;
 
-  .display-table-cell {
-    display: table-cell;
-    vertical-align: middle;
+    @media screen and (max-width: $screen-sm-max) {
+      height: auto;
+    }
   }
 }

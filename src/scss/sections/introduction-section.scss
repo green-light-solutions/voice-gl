@@ -3,10 +3,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-
-  .fp-tableCell {
-    vertical-align: top;
-  }
+  align-items: flex-start;
 
   .btn-primary {
     position: absolute;
@@ -36,7 +33,7 @@
   .headings {
     position: relative;
     animation: fadeIn .5s ease-in;
-    opacity: 0;
+    //opacity: 0; TODO: enable animation after section detection, active, etc..
     transition: opacity .5s ease-in-out $scrolling-speed;
     padding: 0 20px;
 
@@ -69,11 +66,15 @@
   }
 
   @media screen and (max-width: $screen-md-max) {
+    height: 100vh;
+
     &::before {
       animation: none;
     }
 
     .headings {
+      margin: 0 auto;
+
       h2 {
         margin-top: 6vh;
       }

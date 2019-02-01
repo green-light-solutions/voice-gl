@@ -2,23 +2,12 @@
   background: url('../../assets/img/in-store/in-store-bg.jpg') no-repeat center #320441;
   background-size: cover;
   text-align: left;
+  align-items: flex-end;
   z-index: 1;
 
   img {
     width: 100%;
     display: none;
-  }
-
-  @media screen and (max-width: $screen-sm) {
-    padding-top: 0 !important;
-
-    img {
-      display: inline-block;
-    }
-  }
-
-  .fp-tableCell {
-    vertical-align: bottom;
   }
 
   .content-wrapper {
@@ -47,8 +36,16 @@
         line-height: 26px;
       }
     }
+  }
 
-    @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-sm) {
+    padding-top: 0 !important;
+
+    img {
+      display: inline-block;
+    }
+
+    .content-wrapper {
       width: 100%;
 
       .content {
