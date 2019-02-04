@@ -1,5 +1,8 @@
 .section.catalog-section {
   background-color: $color-white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   .content-wrapper {
     width: 40%;
@@ -52,18 +55,25 @@
     transform: translateY(-50%);
     left: 42%;
     height: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     img {
       max-height: 100%;
     }
   }
 
+  @media screen and (max-width: $screen-md-max) {
+    .content-wrapper {
+      .content {
+        margin: 0 auto;
+      }
+    }
+  }
+
   @media screen and (max-width: $screen-sm-max) {
     height: auto !important;
-
-    .fp-tableCell {
-      height: auto !important;
-    }
 
     .content-wrapper {
       width: 100%;
@@ -101,6 +111,7 @@
       max-width: 100%;
       height: auto;
       text-align: center;
+      align-items: center;
 
       img {
         max-width: 80%;

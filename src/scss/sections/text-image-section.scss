@@ -35,13 +35,18 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-max) {
+  @media screen and (max-width: $screen-md-max) {
+    height: auto;
+    flex-direction: column;
+
     .content-wrapper {
       width: 100%;
       text-align: center;
       margin-bottom: 30px;
 
       .content {
+        margin: 0 auto;
+
         h2 {
           font-size: 3.2rem;
           font-weight: 300;

@@ -9,20 +9,12 @@
     display: none;
   }
 
-  @media screen and (max-width: $screen-sm) {
-    background-image: none;
-    padding-top: 0 !important;
-
-    img {
-      display: inline-block;
-    }
-  }
-
   .content-wrapper {
     width: 50%;
     display: inline-block;
     text-align: center;
     padding: 0 20px;
+    margin-left: auto;
 
     .content {
       max-width: 540px;
@@ -45,7 +37,20 @@
       }
     }
 
-    @media screen and (max-width: $screen-sm) {
+
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    display: block;
+    height: auto;
+    background-image: none;
+    padding-top: 0 !important;
+
+    img {
+      display: inline-block;
+    }
+
+    .content-wrapper {
       width: 100%;
 
       .content {

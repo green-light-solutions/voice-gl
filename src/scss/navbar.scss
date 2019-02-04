@@ -1,4 +1,4 @@
-html body nav {
+#main-content nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,7 +34,18 @@ html body nav {
         }
 
         .letters {
-          color: $color-white;
+          body.catalog-1-section &,
+          body.catalog-2-section &,
+          body.catalog-3-section &,
+          body.catalog-4-section &,
+          body.expectation-section &,
+          body.customers-section &,
+          body.global-campaign-section &,
+          body.growth-campaign-section &,
+          body.life-easier-section &,
+          body.why-voice-section & {
+            fill: $color-black;
+          }
         }
 
         .dot,
@@ -53,21 +64,6 @@ html body nav {
             transition-delay: $scrolling-speed;
           }
         }
-      }
-
-      &.white svg {
-        .icon,
-        .dot {
-          fill: $color-white;
-        }
-      }
-
-      &.black svg .letters {
-        fill: $color-black;
-      }
-
-      &.hidden {
-        opacity: 0;
       }
     }
   }
@@ -131,6 +127,10 @@ html body nav {
 
       &.hidden {
         opacity: 0;
+      }
+
+      body.introduction-section & {
+        color: $color-white;
       }
     }
   }
