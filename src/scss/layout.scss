@@ -1,12 +1,12 @@
 #main-content {
-  overflow: hidden;
-
   .section {
     height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     padding-top: 55px;
+    background-color: $color-white;
+    z-index: 5;
 
     @media screen and (max-width: $screen-sm-max) {
       height: auto;
