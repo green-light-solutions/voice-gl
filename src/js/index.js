@@ -35,7 +35,7 @@
 
         $('html, body').animate({
           scrollTop: $(hashVal).offset().top,
-        }, 1200);
+        }, 600);
 
         history.pushState(null, null, hashVal);
         e.preventDefault();
@@ -81,21 +81,28 @@
     });
 
     function checkCurrentSection() {
+      let lastEl;
+
       $('.section').each((k, e) => {
         const currElement = $(e);
+
         if (window.scrollY >= currElement.offset().top &&
           window.scrollY < currElement.offset().top + currElement.height()) {
-          if (currentPage !== e.id) {
-            const url = e.id === 'introduction-section' ? '' : `#${e.id}`;
-            history.replaceState(null, null, url);
-            mainContent.removeClass().addClass(e.id);
-            e.classList.add('active');
-            currentPage = e.id;
-          }
+          lastEl = e;
         } else {
           e.classList.remove('active');
         }
       });
+
+      if (lastEl && lastEl.id !== currentPage) {
+        $('.section.active').removeClass('active');
+        const url = lastEl.id === 'introduction-section' ? '' : `#${lastEl.id}`;
+        history.replaceState(null, null, url);
+        mainContent.removeClass().addClass(lastEl.id);
+        lastEl.classList.add('active');
+        currentPage = lastEl.id;
+      }
+
     }
 
     function checkNavbarMobile() {
@@ -111,5 +118,9 @@
 
       lastScrollTop = scrollTop;
     }
+
+    window.scrollCatalog = function (pages) {
+      window.scrollTo(0, $(window).scrollTop() + $(window).height() * pages);
+    };
   });
 })();
