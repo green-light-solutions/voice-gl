@@ -30,6 +30,8 @@ html {
 
   body {
     font-size: 1.3rem;
+    margin: 0;
+    overflow-x: hidden;
 
     .hidden {
       opacity: 0;
@@ -54,20 +56,18 @@ html {
   .section.why-voice-section {
     height: auto !important;
     padding: 0 0 60px;
-
-    .fp-tableCell {
-      height: auto !important;
-    }
   }
 }
 
-@import './sections/introduction-section';
-@import './sections/info-section';
-@import './sections/catalog-section';
-@import './sections/customers-section';
-@import './sections/expectation-section';
-@import './sections/text-image-section';
-@import './sections/image-text-section';
-@import './sections/in-store-section';
-@import './sections/why-voice-section';
-@import './sections/contact-section';
+#main-content {
+  @import './sections/introduction-section';
+  @import './sections/info-section';
+  @import './sections/catalog-section';
+  @import './sections/customers-section';
+  @import './sections/expectation-section';
+  @import './sections/text-image-section';
+  @import './sections/image-text-section';
+  @import './sections/in-store-section';
+  @import './sections/why-voice-section';
+  @import './sections/contact-section';
+}

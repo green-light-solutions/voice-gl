@@ -1,5 +1,6 @@
 .section.expectation-section {
   text-align: center;
+  background-color: $color-white;
 
   .content-wrapper {
     width: 80%;
@@ -24,6 +25,8 @@
   }
 
   @media screen and (max-width: $screen-sm-max) {
+    margin-top: 0;
+
     .content-wrapper {
       margin-bottom: 30px;
 

@@ -1,9 +1,71 @@
 .section.catalog-section {
   background-color: $color-white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity linear .35s;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  top: 0;
+  pointer-events: none;
+
+
+  @media screen and (min-width: $screen-sm-max) {
+    &#catalog-1-section {
+      position: relative;
+
+      .content-wrapper {
+        position: absolute;
+      }
+
+      .content-wrapper,
+      .voice-device-preview {
+        position: absolute;
+      }
+
+      &.active {
+        .content-wrapper,
+        .voice-device-preview {
+          position: fixed;
+        }
+      }
+    }
+
+    body.catalog-2-section &#catalog-1-section,
+    body.catalog-3-section &#catalog-1-section,
+    body.catalog-4-section &#catalog-1-section {
+      .content-wrapper,
+      .voice-device-preview {
+        position: fixed;
+      }
+    }
+
+    &#catalog-1-section {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    &#catalog-4-section {
+      height: 200vh;
+    }
+
+    body.catalog-2-section &#catalog-1-section,
+    body.catalog-3-section &#catalog-1-section,
+    body.catalog-4-section &#catalog-1-section {
+      opacity: 0;
+    }
+  }
 
   .content-wrapper {
     width: 40%;
     padding: 0 0 0 20px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-white;
+    left: 0;
 
     .content {
       max-width: 380px;
@@ -13,6 +75,7 @@
         list-style-type: none;
 
         li {
+          cursor: pointer;
           margin: 45px 0;
           font-size: 24px;
           line-height: 29px;
@@ -47,26 +110,43 @@
   }
 
   .voice-device-preview {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     left: 42%;
     height: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     img {
       max-height: 100%;
     }
   }
 
+  &.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  @media screen and (max-width: $screen-md-max) {
+    .content-wrapper {
+      .content {
+        margin: 0 auto;
+      }
+    }
+  }
+
   @media screen and (max-width: $screen-sm-max) {
     height: auto !important;
-
-    .fp-tableCell {
-      height: auto !important;
-    }
+    position: relative;
+    opacity: 1;
 
     .content-wrapper {
       width: 100%;
+      position: relative;
+      transform: none;
+      margin-top: 20px;
 
       .content {
         ul {
@@ -101,6 +181,7 @@
       max-width: 100%;
       height: auto;
       text-align: center;
+      align-items: center;
 
       img {
         max-width: 80%;
