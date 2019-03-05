@@ -27,6 +27,7 @@
     }, 'xml');
 
     checkCurrentSection();
+    checkNavbar();
 
     // Init smooth scrolling
     $('a[href^="#"]').each((k, linkElement) => {
@@ -74,6 +75,7 @@
     $(window).scroll(() => {
       checkCurrentSection();
       checkNavbarMobile();
+      checkNavbar();
     });
 
     $(window).resize(() => {
@@ -117,6 +119,14 @@
       }
 
       lastScrollTop = scrollTop;
+    }
+
+    function checkNavbar() {
+      if (window.scrollY > 5) {
+        navbar.addClass('bg-on');
+      } else {
+        navbar.removeClass('bg-on');
+      }
     }
 
     window.scrollCatalog = function (pages) {

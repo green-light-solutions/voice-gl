@@ -3,10 +3,34 @@
   top: 0;
   left: 0;
   z-index: 1030;
-  padding: 25px 30px;
+  padding: 8px 30px;
   width: 100%;
   opacity: 1;
-  transition: all .3s linear;
+  transition: all .5s linear;
+  -webkit-transform: translateZ(0);
+
+  &.bg-on {
+    border-bottom: 1px solid rgba($color-gray, .2);
+    background-color: rgba($color-black, .15);
+    -webkit-backdrop-filter: saturate(90%) blur(20px);
+    backdrop-filter: saturate(90%) blur(20px);
+
+    body.catalog-1-section &,
+    body.catalog-2-section &,
+    body.catalog-3-section &,
+    body.catalog-4-section &,
+    body.expectation-section &,
+    body.customers-section &,
+    body.global-campaign-section &,
+    body.growth-campaign-section &,
+    body.life-easier-section &,
+    body.why-voice-section & {
+      fill: $color-black;
+      background-color: rgba($color-white, .8);
+      -webkit-backdrop-filter: saturate(90%) blur(10px);
+      backdrop-filter: saturate(90%) blur(10px);
+    }
+  }
 
   &.hidden {
     opacity: 1;
@@ -71,12 +95,14 @@
   #btn-ready {
     float: right;
     text-decoration: none;
+    margin: 10px 0;
   }
 
   @media screen and (max-width: $screen-sm) {
     background-color: $color-white;
     border-bottom: 1px solid #e7e7e7;
     padding: 10px 15px;
+    transition: all .2s linear;
 
     #logo,
     #logo svg .letters,
@@ -124,6 +150,7 @@
       display: block;
       color: $color-primary;
       border-color: $color-primary;
+      margin: 3px 0;
 
       &.hidden {
         opacity: 0;
