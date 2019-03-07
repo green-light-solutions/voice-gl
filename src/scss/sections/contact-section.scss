@@ -13,7 +13,7 @@ $footer-height-mobile: 60px;
     flex-direction: column;
     justify-content: flex-end;
 
-    .content-wrapper {
+    .catalog-menu {
       width: 100%;
       position: relative;
       flex: 1 1 auto;
@@ -179,7 +179,7 @@ $footer-height-mobile: 60px;
     }
 
     @media screen and (max-height: 710px) {
-      .content-wrapper {
+      .catalog-menu {
         .content {
           .input-wrapper {
             flex-direction: row;
@@ -199,7 +199,7 @@ $footer-height-mobile: 60px;
     }
 
     @media screen and (max-width: $screen-md-max) {
-      .content-wrapper {
+      .catalog-menu {
         .content {
           position: relative;
           top: auto;
@@ -211,7 +211,7 @@ $footer-height-mobile: 60px;
 
     @media screen and (max-width: $screen-sm-max) {
 
-      .content-wrapper {
+      .catalog-menu {
         .content {
           width: 100%;
           padding: 0 20px;
@@ -264,7 +264,7 @@ $footer-height-mobile: 60px;
     height: calc(100vh + #{$footer-height-mobile});
 
     .section-wrapper {
-      .content-wrapper {
+      .catalog-menu {
         display: flex;
         align-items: center;
       }

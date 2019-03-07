@@ -1,7 +1,7 @@
 .section.customers-section {
   text-align: center;
 
-  .content-wrapper {
+  .catalog-menu {
     max-width: 920px;
     margin: 0 auto;
 
@@ -14,7 +14,7 @@
   }
 
   @media screen and (max-width: $screen-sm-max) {
-    .content-wrapper {
+    .catalog-menu {
       width: 80%;
 
       p {

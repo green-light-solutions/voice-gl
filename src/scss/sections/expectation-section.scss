@@ -2,7 +2,7 @@
   text-align: center;
   background-color: $color-white;
 
-  .content-wrapper {
+  .catalog-menu {
     width: 80%;
     margin: 0 auto;
 
@@ -27,7 +27,7 @@
   @media screen and (max-width: $screen-sm-max) {
     margin-top: 0;
 
-    .content-wrapper {
+    .catalog-menu {
       margin-bottom: 30px;
 
       h2 {

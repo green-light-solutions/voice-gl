@@ -1,107 +1,83 @@
 .section.catalog-section {
-  background-color: $color-white;
+  background-color: transparent;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  opacity: 0;
-  transition: opacity linear .35s;
   position: relative;
   z-index: 1;
   padding: 0;
   top: 0;
-  pointer-events: none;
 
-
-  @media screen and (min-width: $screen-sm-max) {
-    &#catalog-1-section {
-      position: relative;
-
-      .content-wrapper {
-        position: absolute;
-      }
-
-      .content-wrapper,
-      .voice-device-preview {
-        position: absolute;
-      }
-
-      &.active {
-        .content-wrapper,
-        .voice-device-preview {
-          position: fixed;
-        }
-      }
-    }
-
-    body.catalog-2-section &#catalog-1-section,
-    body.catalog-3-section &#catalog-1-section,
-    body.catalog-4-section &#catalog-1-section {
-      .content-wrapper,
-      .voice-device-preview {
-        position: fixed;
-      }
-    }
-
-    &#catalog-1-section {
-      opacity: 1;
-      pointer-events: initial;
-    }
-
-    &#catalog-4-section {
-      height: 200vh;
-    }
-
-    body.catalog-2-section &#catalog-1-section,
-    body.catalog-3-section &#catalog-1-section,
-    body.catalog-4-section &#catalog-1-section {
-      opacity: 0;
-    }
+  .sm-only {
+    display: none;
+    color: $color-gray;
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+    margin: 25px auto 10px;
   }
 
-  .content-wrapper {
-    width: 40%;
-    padding: 0 0 0 20px;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: $color-white;
-    left: 0;
+  @media screen and (min-width: $screen-sm-max) {
+    .catalog-menu {
+      width: 40%;
+      padding: 0 0 0 20px;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%) translateX(-10%);
+      left: 0;
+      opacity: 0;
+      transition: opacity ease-in .15s,
+                  transform ease-in .1s;
 
-    .content {
-      max-width: 380px;
-      margin-left: auto;
+      &.show {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
 
-      ul {
-        list-style-type: none;
+      &.absolute {
+        top: calc(50% + 150px);
+        position: absolute;
+      }
 
-        li {
-          cursor: pointer;
-          margin: 45px 0;
-          font-size: 24px;
-          line-height: 29px;
-          letter-spacing: .3px;
-          display: flex;
+      .content {
+        max-width: 380px;
+        margin-left: auto;
 
-          .category-name {
-            flex: 0 1 auto;
-            color: $color-gray;
-            text-decoration: none;
-          }
+        ul {
+          list-style-type: none;
 
-          .active-line {
-            flex: 1 1 auto;
-            height: 1px;
-            margin-top: 15px;
-            margin-left: 20px;
-          }
+          li {
+            cursor: pointer;
+            margin: 45px 0;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: .3px;
+            display: flex;
 
-          &.active {
             .category-name {
-              color: $color-primary;
+              flex: 0 1 auto;
+              color: $color-gray;
+              text-decoration: none;
+              transition: color ease-in .3s;
             }
 
             .active-line {
+              flex: 1 1 auto;
+              height: 1px;
+              margin-top: 15px;
+              margin-left: 20px;
               border-top: 1px solid $color-primary;
+              transition: opacity linear .3s;
+              opacity: 0;
+            }
+
+            &.active {
+              .category-name {
+                color: $color-primary;
+              }
+
+              .active-line {
+                opacity: 1;
+              }
             }
           }
         }
@@ -110,7 +86,7 @@
   }
 
   .voice-device-preview {
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 42%;
@@ -125,12 +101,11 @@
   }
 
   &.active {
-    opacity: 1;
-    pointer-events: initial;
+
   }
 
   @media screen and (max-width: $screen-md-max) {
-    .content-wrapper {
+    .catalog-menu {
       .content {
         margin: 0 auto;
       }
@@ -142,35 +117,12 @@
     position: relative;
     opacity: 1;
 
-    .content-wrapper {
-      width: 100%;
-      position: relative;
-      transform: none;
-      margin-top: 20px;
+    .sm-only {
+      display: inline;
+    }
 
-      .content {
-        ul {
-          padding: 0;
-          text-align: center;
-
-          li {
-            display: none;
-
-            &.active {
-              display: inline;
-
-              .category-name {
-                color: $color-gray;
-                font-size: 3.2rem;
-              }
-            }
-
-            .active-line {
-              display: none;
-            }
-          }
-        }
-      }
+    .catalog-menu {
+      display: none;
     }
 
     .voice-device-preview{
