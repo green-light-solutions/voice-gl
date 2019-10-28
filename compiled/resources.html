@@ -1,0 +1,541 @@
+<html lang="en">
+<head>
+    <title>Vision.gl</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000099">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#eff7fd">
+
+    <link href="./assets/css/styles.css" rel="stylesheet"></head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <a class="header__logo" href="/">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg version="1.1" viewBox="0 0 135 30" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                    <g fill="#009">
+                        <g>
+                            <g fill-rule="nonzero" transform="translate(0 2)">
+                                <path
+                                    d="m13 19c3.3137 0 6-2.6863 6-6s-2.6863-6-6-6-6 2.6863-6 6 2.6863 6 6 6zm0-3c-1.6569 0-3-1.3431-3-3s1.3431-3 3-3 3 1.3431 3 3-1.3431 3-3 3z" />
+                                <path
+                                    d="m13 26c7.1797 0 13-5.8203 13-13 0-7.1797-5.8203-13-13-13-7.1797 0-13 5.8203-13 13 0 7.1797 5.8203 13 13 13zm0-3c-5.5228 0-10-4.4772-10-10s4.4772-10 10-10 10 4.4772 10 10-4.4772 10-10 10z" />
+                            </g>
+                            <text font-family="ProximaNova-Semibold, Proxima Nova" font-size="24" font-weight="500"
+                                letter-spacing="-.2" line-spacing="24">
+                                <tspan x="34" y="24">VISION.gl</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <button class="burger-menu js-header-menu" aria-expanded="false" title="open main menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="header__menu">
+            <div class="header__scrollable">
+                <ul class="header__menu-container">
+                    <li>
+                        <a href="/">Why Vision</a>
+                    </li>
+                    <li>
+                        <a href="/explore-vision.html">Explore Vision</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" aria-expanded="false" aria-controls="menu-list">Resources<i
+                                class="icon icon__chevron-expand"></i></a>
+                        <div class="sub-menu">
+                            <div class="container">
+                                <div class="sub-menu__inner-wrapper">
+                                    <div class="sub-menu__container">
+                                        <div class="sub-menu__section">
+                                            <div class="sub-menu__section-title">Topics</div>
+                                            <ul class="sub-menu__section-links">
+                                                <li>
+                                                    <a href="/resources.html">All</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Brand & Marketing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Customer Analytics</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Customer Experience</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Computer Vision</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Store Optimization</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="sub-menu__section-links">
+                                                <li>
+                                                    <a href="/resources.html">Interactions</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Retail Innovation</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Retail Technology</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/resources.html">Store Concepts</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sub-menu__section">
+                                            <div class="sub-menu__section-title">Resources</div>
+                                            <ul class="sub-menu__section-links">
+                                                <li>
+                                                    <a href="/pdf-download.html">All</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pdf-download.html">Case Studies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pdf-download.html">Use Cases</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pdf-download.html">Guides</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pdf-download.html">Infographics</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pdf-download.html">Product Information</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="sub-menu__container">
+                                        <div class="sub-menu__viewfinder">
+                                            <div class="sub-menu__viewfinder-title">
+                                                The Viewfinder
+                                            </div>
+                                            <p class="sub-menu__viewfinder-description">
+                                                Part fact, part view. Fill-on customer connection and future of retail.
+                                            </p>
+                                            <form action="">
+                                                <label for="email"></label>
+                                                <input id="email" type="text" placeholder="Email Address">
+                                                <button class="btn btn-alternative" type="submit">Subscribe</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/about.html">About Us</a>
+                    </li>
+                </ul>
+                <div class="header__menu-buttons">
+                    <a class="btn btn-alternative btn-neutral btn-login" href="#">Login</a>
+                    <a class="btn btn-primary request-demo" href="/contact.html">Request a Demo</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main id="page-content">
+    <div class="container">
+        <div class="resources">
+            <div class="content-head">
+                <form id="search-form" action="">
+                    <div class="input-group">
+                        <input type="search" placeholder="What are you looking for?">
+                        <button class="search-submit-icon" type="submit"></button>
+                    </div>
+                </form>
+            </div>
+            <section class="featured-article">
+                <div class="grid-row">
+                    <div class="grid-col--12">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-2.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">video</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Brand & Marketing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    How Data Informed New San Francisco Office Design
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-alternative" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="article__list">
+                <div class="grid-row">
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-2.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">video</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Brand & Marketing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Why compete when you can collaborate – Omnichannel retailing
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-3.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry newsletter article__newsletter">
+                            <div class="newsletter__container">
+                                <div class="newsletter__text">
+                                    Get the newest retail and data insights
+                                </div>
+                                <div class="newsletter__form">
+                                    <input type="text" placeholder="Email Address">
+                                    <button class="btn btn-primary">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-4.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-5.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-6.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-7.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-8.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-xs--12 grid-col-sm--6 grid-col--4">
+                        <div class="article__entry">
+                            <div class="article__thumbnail">
+                                <img src="/assets/img/content/article-9.png" alt="">
+                            </div>
+                            <div class="article__details">
+                                <div class="article__tags">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Computer Vision</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h2 class="article__title">
+                                    Support your GDPR compliance with EPos
+                                </h2>
+                                <div class="article__cta">
+                                    <a class="btn btn-text" href="#">
+                                        Read More<i class="icon icon__chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__more-btn">
+                    <button class="btn btn-alternative">
+                        Load More
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__follow-n-links">
+                <div class="footer__follow-us footer__section">
+                    <div class="footer__title">
+                        Follow Vision
+                    </div>
+                    <ul class="socials">
+                        <li><a class="social social__facebook" href="#">Facebook</a></li>
+                        <li><a class="social social__twiter" href="#">Twitter</a></li>
+                        <li><a class="social social__linkedin" href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer__quicklinks footer__section">
+                    <div class="quicklinks">
+                        <div class="quicklinks__wrapper">
+                            <div class="footer__title">
+                                Vision
+                            </div>
+                            <ul class="quicklinks__container">
+                                <li>
+                                    <a href="#">
+                                        Explore Vision
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        FAQs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Press Kit
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="quicklinks__wrapper">
+                            <div class="footer__title">
+                                Company
+                            </div>
+                            <ul class="quicklinks__container">
+                                <li>
+                                    <a href="#">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Resurces
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__logo-copyright footer__section">
+                <a class="footer__logo" href="/">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg version="1.1" viewBox="0 0 135 30" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <g fill="#009">
+                                <g>
+                                    <g fill-rule="nonzero" transform="translate(0 2)">
+                                        <path
+                                            d="m13 19c3.3137 0 6-2.6863 6-6s-2.6863-6-6-6-6 2.6863-6 6 2.6863 6 6 6zm0-3c-1.6569 0-3-1.3431-3-3s1.3431-3 3-3 3 1.3431 3 3-1.3431 3-3 3z" />
+                                        <path
+                                            d="m13 26c7.1797 0 13-5.8203 13-13 0-7.1797-5.8203-13-13-13-7.1797 0-13 5.8203-13 13 0 7.1797 5.8203 13 13 13zm0-3c-5.5228 0-10-4.4772-10-10s4.4772-10 10-10 10 4.4772 10 10-4.4772 10-10 10z" />
+                                    </g>
+                                    <text font-family="ProximaNova-Semibold, Proxima Nova" font-size="24" font-weight="500"
+                                        letter-spacing="-.2" line-spacing="24">
+                                        <tspan x="34" y="24">VISION.gl</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <div class="footer__copyright">
+                    <p>Copyright 2019 Greenlight</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Terms of service
+                            </a>
+                        </li><li>
+                            <a href="#">
+                                Privacy policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./assets/js/bundle.js"></script></body>
+</html>

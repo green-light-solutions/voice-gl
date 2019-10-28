@@ -1,0 +1,15 @@
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="Resources-Detail-375" transform="translate(-16.000000, -83.000000)">
+            <g id="Header" transform="translate(16.000000, 83.000000)">
+                <g id="Back">
+                    <g id="Button">
+                        <rect id="Rectangle-2" stroke-opacity="0.5" stroke="#BDC7CF" fill="#FFFFFF" x="0.5" y="0.5" width="23" height="23" rx="11.5"></rect>
+                        <polyline id="Path-3" stroke="#000099" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) " points="10 8 14 12 10 16"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
